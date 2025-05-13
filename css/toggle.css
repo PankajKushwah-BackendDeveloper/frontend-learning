@@ -27,10 +27,14 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: var(--background-color);
   color: var(--primary-text-color);
-  
+}
+.container {
+  min-height: 100vh;
+  padding: 20px 80px;
+  /* background-color: var(--background-color); */
 }
 h1 {
-  /* font-family: 'Playfair Display', serif; */
+  font-family: 'Playfair Display', serif;
   font-size: 2.5rem;
   color: var(--primary-text-color);
   margin: var(--default-margin) 0;
@@ -39,13 +43,13 @@ h1 {
   text-transform: uppercase;
   letter-spacing: 2px;
   margin: 10px 20px;
-  background: var(--primary-gradient);
+  align-items: center;
 }
 
 .box {
   padding: 20px;
   margin: var(--default-margin);
-  border-radius: 8px;
+  border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: var(--card-background-color);
 }
@@ -65,17 +69,9 @@ h1 {
 }
 
 .toggle-button {
-  /* position: absolute;
+  position: fixed;
   top: 30px;
-  right: 20px; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  flex-direction: column;
-  position: absolute;
-  top:0;
-  right: 0;
+  right: 10px;
   width: 50px;
   height: 50px;
   background-color: var(--primary-text-color);
@@ -101,14 +97,18 @@ h1 {
   color: #fff;
 }
 
-
-
-
 @media screen and (max-width: 768px) {
-  h1{
+  h1 {
     font-size: 2rem;
   }
-  
+  .container {
+    padding: 20px 0px;
+  }
+  .toggle-button {
+    width: 40px;
+    height: 40px;
+    font-size: 0.8rem;
+  }
 }
 
 /* .toggle-button:before {
