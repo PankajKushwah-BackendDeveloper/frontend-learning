@@ -1,0 +1,57 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/toggle.css" />
+    <title>toggle</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Nature Park</h1>
+        <button class="toggle-button">
+          <span>Dark Mode</span>
+        </button>
+      </header>
+      <div class="box">
+        <h2>WaterFalls</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium,
+          architecto corporis. Consectetur numquam voluptates consequatur porro?
+          Numquam culpa maxime corrupti error totam quibusdam, nisi nulla,
+          magni, corporis consectetur odio voluptas.
+        </p>
+      </div>
+      <div class="box">
+        <h2>WaterFalls</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium,
+          architecto corporis. Consectetur numquam voluptates consequatur porro?
+          Numquam culpa maxime corrupti error totam quibusdam, nisi nulla,
+          magni, corporis consectetur odio voluptas.
+        </p>
+      </div>
+      <div class="box">
+        <h2>WaterFalls</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium,
+          architecto corporis. Consectetur numquam voluptates consequatur porro?
+          Numquam culpa maxime corrupti error totam quibusdam, nisi nulla,
+          magni, corporis consectetur odio voluptas.
+        </p>
+      </div>
+    </div>
+
+    <script>
+      const toggleButton = document.querySelector(".toggle-button");
+      toggleButton.addEventListener("click", () => {
+        document.body.classList.toggle("dark");
+        if (document.body.classList.contains("dark")) {
+          toggleButton.innerHTML = "<span>Light Mode</span>";
+        } else {
+          toggleButton.innerHTML = "<span>Dark Mode</span>";
+        }
+      });
+    </script>
+  </body>
+</html>

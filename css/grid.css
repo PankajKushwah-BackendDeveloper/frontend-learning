@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.grid-container {
+  display: grid;
+  border: 4px solid black;
+  align-items: center;
+  margin-top: 20px;
+  /* justify-content: center; */
+  /* grid-template-columns: 1fr 1fr 2fr; */
+  /* grid-template-rows: 1fr 2fr 1fr; */
+  /* height: 80vh; or 100vh, or any fixed/relative unit */
+
+  grid-template-areas:
+    "hr hr hr hr"
+    "sdr main main main"
+    "sdr main main main"
+    "ftr ftr ftr ftr";
+}
+
+.box {
+  border: 1px solid green;
+  padding: 10px;
+  height: 8vh;
+  margin: 10px;
+}
+
+
+.box-1 {
+  grid-area: hr;
+  background-color: lightblue;
+}
+
+.box-2 {
+  grid-area: sdr;
+  background-color: lightgreen;
+  /* height: 40vh; */
+}
+
+.box-3 {
+  grid-area: main;
+  background-color: lightcoral;
+}
+.box-4 {
+  grid-area: hr;
+  background-color: lightyellow;
+}
+/* .box-5 {
+  grid-area: sdr;
+  background-color: lightgreen;
+}
+.box-6 {
+  grid-area: main;
+  background-color: lightcoral;
+}
+.box-7 {
+  grid-area: ftr;
+  background-color: lightyellow;
+} */
