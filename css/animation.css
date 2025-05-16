@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: teal;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+.container {
+  width: 300px;
+  height: 300px;
+  border: 2px solid white;
+  animation: orbit 5s linear infinite;
+  border-radius: 50%;
+  /* position: relative;
+  overflow: hidden; */
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  /* animation-name: slid-in; */
+  /* animation-delay: 1s; */
+  animation-duration: 2s;
+  /* animation-direction: alternate; */
+  animation-iteration-count: infinite;
+  border-radius: 50%;
+  position: fixed;
+  /* animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    animation-play-state: running; */
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+  animation: up-down 1s ease-in-out infinite;
+  /* animation-delay: 0.2s; */
+}
+
+
+.dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.dot:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+
+@keyframes up-down {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes orbit {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes slid-in {
+  0% {
+    transform: translateX(-400px);
+  }
+  100% {
+    transform: translateX(200px);
+  }
+}

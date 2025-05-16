@@ -7,56 +7,35 @@
 .grid-container {
   display: grid;
   border: 4px solid black;
-  align-items: center;
+  /* align-items: center; */
   margin-top: 20px;
-  /* justify-content: center; */
-  /* grid-template-columns: 1fr 1fr 2fr; */
-  /* grid-template-rows: 1fr 2fr 1fr; */
-  /* height: 80vh; or 100vh, or any fixed/relative unit */
-
+  background-color: teal;
+  padding: 20px;
+  grid-gap: 20px;
   grid-template-areas:
-    "hr hr hr hr"
-    "sdr main main main"
-    "sdr main main main"
-    "ftr ftr ftr ftr";
+    "header header header"
+    "main main sidebar"
+    "main main sidebar"
+    "footer footer footer";
+  grid-template-rows: 100px 100px 100px 100px; /* add this line */
 }
-
-.box {
-  border: 1px solid green;
-  padding: 10px;
-  height: 8vh;
-  margin: 10px;
+.box{
+  /* background-color: lightblue; */
+  border: 1px solid rgb(240, 156, 156);
+  padding: 20px;
+  text-align: center;
 }
-
 
 .box-1 {
-  grid-area: hr;
+  grid-area: header;
   background-color: lightblue;
+  grid-template-rows: auto auto auto; /* add this line */
 }
-
 .box-2 {
-  grid-area: sdr;
+  grid-area: main;
   background-color: lightgreen;
-  /* height: 40vh; */
 }
-
 .box-3 {
-  grid-area: main;
-  background-color: lightcoral;
+  grid-area: sidebar;
+  background-color: lightpink;
 }
-.box-4 {
-  grid-area: hr;
-  background-color: lightyellow;
-}
-/* .box-5 {
-  grid-area: sdr;
-  background-color: lightgreen;
-}
-.box-6 {
-  grid-area: main;
-  background-color: lightcoral;
-}
-.box-7 {
-  grid-area: ftr;
-  background-color: lightyellow;
-} */
